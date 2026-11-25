@@ -29,3 +29,12 @@
   left: 120px;
   width: 18rem;
 }
+
+/* TD 4 : remplacer :hover par [open], comme demandé dans le README. */
+.accordeon > details {
+  transition: width 2s ease-in-out;
+}
+
+.accordeon > details[open] {
+  width: calc(100px + 20rem);
+}

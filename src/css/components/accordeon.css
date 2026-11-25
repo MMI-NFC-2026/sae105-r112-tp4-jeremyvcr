@@ -45,3 +45,18 @@
   width: 200px;
   height: auto;
 }
+
+/* TD 4 : un triangle formé par les bordures, puis tourné à l'ouverture. */
+.accordeon > details > summary::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 40px solid transparent;
+  border-left-color: #ccc;
+  transition: transform 2s;
+}
+
+.accordeon > details[open] > summary::after {
+  border-left-color: pink;
+  transform: rotate(90deg);
+}

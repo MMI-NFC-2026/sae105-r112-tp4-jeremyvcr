@@ -1,7 +1,3 @@
-/**
- * Accordeon vertical — seconde vidéo du TP.
- * TD 4 : hauteur auto, overflow et transition.
- */
 :root {
   interpolate-size: allow-keywords;
 }
@@ -21,8 +17,6 @@
   border-radius: 10px;
   transition: height 2s ease-in-out;
 }
-
-/* README : [open] remplace le :hover de l'exemple du TD. */
 .accordeon > details[open] {
   height: auto;
 }
@@ -34,8 +28,6 @@
   cursor: pointer;
   list-style: none;
 }
-
-/* Suppression du marqueur natif : code fourni dans le README. */
 .accordeon > details > summary::marker,
 .accordeon > details > summary::-webkit-details-marker {
   display: none;
@@ -45,8 +37,6 @@
   width: 200px;
   height: auto;
 }
-
-/* TD 4 : un triangle formé par les bordures, puis tourné à l'ouverture. */
 .accordeon > details > summary::after {
   content: "";
   width: 0;

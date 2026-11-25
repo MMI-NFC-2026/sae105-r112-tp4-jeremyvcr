@@ -1,3 +1,31 @@
 /**
-* Accordeon
-*/
+ * Accordeon — dimensions et débordement du TD 4.
+ */
+.accordeon {
+  display: flex;
+  gap: 20px;
+}
+
+.accordeon > details {
+  position: relative;
+  width: 100px;
+  min-height: 150px;
+  overflow: hidden;
+}
+
+.accordeon > details > summary {
+  width: 100px;
+  cursor: pointer;
+}
+
+.accordeon > details > summary > img {
+  width: 100px;
+  height: auto;
+}
+
+.accordeon > details > div {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: 18rem;
+}

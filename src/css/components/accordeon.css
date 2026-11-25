@@ -1,40 +1,47 @@
 /**
- * Accordeon — dimensions et débordement du TD 4.
+ * Accordeon vertical — seconde vidéo du TP.
+ * TD 4 : hauteur auto, overflow et transition.
  */
+:root {
+  interpolate-size: allow-keywords;
+}
+
 .accordeon {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
+  width: 320px;
 }
 
 .accordeon > details {
-  position: relative;
-  width: 100px;
-  min-height: 150px;
+  height: 151px;
+  padding: 10px;
   overflow: hidden;
+  background: #eee;
+  border-radius: 10px;
+  transition: height 2s ease-in-out;
 }
 
-.accordeon > details > summary {
-  width: 100px;
-  cursor: pointer;
-}
-
-.accordeon > details > summary > img {
-  width: 100px;
+/* README : [open] remplace le :hover de l'exemple du TD. */
+.accordeon > details[open] {
   height: auto;
 }
 
-.accordeon > details > div {
-  position: absolute;
-  top: 0;
-  left: 120px;
-  width: 18rem;
+.accordeon > details > summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  list-style: none;
 }
 
-/* TD 4 : remplacer :hover par [open], comme demandé dans le README. */
-.accordeon > details {
-  transition: width 2s ease-in-out;
+/* Suppression du marqueur natif : code fourni dans le README. */
+.accordeon > details > summary::marker,
+.accordeon > details > summary::-webkit-details-marker {
+  display: none;
 }
 
-.accordeon > details[open] {
-  width: calc(100px + 20rem);
+.accordeon > details > summary > img {
+  width: 200px;
+  height: auto;
 }
